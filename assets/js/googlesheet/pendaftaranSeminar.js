@@ -148,6 +148,10 @@ function uploadFormData(formData) {
         .then(data => {
             if (data.result === 'success') {
                 alert("Terima kasih! Formulir Anda telah berhasil dikirim.");
+                const jenisKegiatan = 'seminar';
+                setTimeout(() => {
+                    window.location.href = `thanks.html?jenis=${encodeURIComponent(jenisKegiatan)}`;
+                }, 100); // jeda pendek agar alert bisa tampil sebentar
                 form.reset();
             } else if (data.result === 'duplicate') {
                 alert("Data duplikat. Mohon gunakan nama & nomor telepon yang berbeda.");
