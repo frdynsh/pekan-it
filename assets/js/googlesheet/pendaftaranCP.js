@@ -6,20 +6,13 @@ const sheetDataURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSYPCJbwWs
 const form = document.forms['form-pendaftaran-cp'];
 const submitButton = form.querySelector('input[type="submit"]');
 
-// Elemen status
-const statusMessageContainer = document.createElement('div');
-statusMessageContainer.style.marginTop = '15px';
-statusMessageContainer.style.fontWeight = 'bold';
-submitButton.parentElement.insertAdjacentElement('afterend', statusMessageContainer);
-
 form.addEventListener('submit', e => {
     e.preventDefault();
 
     // Tampilkan status awal
     submitButton.disabled = true;
     submitButton.value = "Mengirim...";
-    statusMessageContainer.style.color = 'black';
-    statusMessageContainer.textContent = 'Sedang memproses data dan mengunggah file...';
+    alert('Sedang memproses data dan mengunggah file...');
 
     const formData = new FormData(form);
 
@@ -57,8 +50,7 @@ form.addEventListener('submit', e => {
 
     // Tampilkan pesan jika ada yang kosong
     if (isEmpty) {
-        statusMessageContainer.style.color = 'red';
-        statusMessageContainer.textContent = "Kamu wajib mengisi semua data yang ada.";
+        alert("Kamu wajib mengisi semua data yang ada.");
         submitButton.disabled = false;
         submitButton.value = "Kirim";
         return;
@@ -69,8 +61,7 @@ form.addEventListener('submit', e => {
     const noTelepon = formData.get("no_telepon")?.trim();
 
     if (!nama || !noTelepon) {
-        statusMessageContainer.style.color = 'red';
-        statusMessageContainer.textContent = "Nama lengkap dan nomor telepon wajib diisi.";
+        alert("Nama lengkap dan nomor telepon wajib diisi.");
         submitButton.disabled = false;
         submitButton.value = "Kirim";
         return;
