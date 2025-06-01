@@ -156,7 +156,11 @@ function uploadFormData(formData) {
         .then(response => response.json())
         .then(data => {
             if (data.result === 'success') {
-               alert("Terima kasih! Formulir Anda telah berhasil dikirim.");
+                alert("Terima kasih! Formulir Anda telah berhasil dikirim.");
+                const jenisKegiatan = 'cp';
+                setTimeout(() => {
+                    window.location.href = `thanks.html?jenis=${encodeURIComponent(jenisKegiatan)}`;
+                }, 100); // jeda pendek agar alert bisa tampil sebentar
                 form.reset();
             } else if (data.result === 'duplicate') {
                 alert("Data duplikat. Mohon gunakan nama & nomor telepon yang berbeda.");

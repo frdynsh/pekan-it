@@ -149,6 +149,13 @@ function uploadFormData(formData) {
         .then(data => {
             if (data.result === 'success') {
                 alert("Terima kasih! Formulir Anda telah berhasil dikirim.");
+                // ✅ AMBIL pilihan lomba dari radio input:
+                const selectedEvent = form.querySelector('input[name="event"]:checked')?.value || 'form-pendaftaran-lomba';
+
+                // ✅ Redirect ke thanks.html dengan parameter `jenis`
+                setTimeout(() => {
+                    window.location.href = `thanks.html?jenis=${encodeURIComponent(selectedEvent)}`;
+                }, 100);
                 form.reset();
             } else if (data.result === 'duplicate') {               
                 alert("Nama Tim sudah terdaftar, Anda tidak bisa mendaftar menggunakan nama tim ini.");
