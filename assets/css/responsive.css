@@ -245,19 +245,45 @@
       display: none;
     }
 
-      /* =============== section Footer ================ */
-      .footer-text{
-        display: flex;
-        position: relative;
-        gap: 70px;
-        padding: 20px 0 0 20px;
-      }
-      .logo-section{
-        margin-left: 0px;
-      }
-      .section-3{
-        margin-top: -40px; 
-      }
+    .hero-section-thanks{
+      padding: auto 0.5rem;
+      height: 90vh;
+    }
+    .hero-section-thanks .hero-title h1{
+      font-size: 3rem;
+    }
+    .hero-section-thanks .hero-title p{
+      font-size: 1.5rem;
+    }
+    .thanks-section{
+      padding: 0 0.5rem;
+      height: 50vh;
+    }
+    .thanks-title h2{
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .thanks-title p{
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .thanks-title span {
+      font-size: 2.5xrem;
+    }
+
+    /* =============== section Footer ================ */
+    .footer-text{
+      display: flex;
+      position: relative;
+      gap: 70px;
+      padding: 20px 0 0 20px;
+    }
+    .logo-section{
+      margin-left: 0px;
+    }
+    .section-3{
+      margin-top: -40px; 
+    }
   }
       
   @media only screen and (min-width: 768px){

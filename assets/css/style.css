@@ -1365,3 +1365,262 @@ footer {
 	color: #ffffffc2;
 	background-color: #000000b0;
   }
+
+
+
+
+
+/* =============== CSS THANKS ================ */
+.hero-section-thanks {
+    position: relative;
+    background: url("../img/thanks/bg.png");
+	background-size: cover;
+	background-position: center -30%;
+	background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 70px;
+}
+.hero-section-thanks .hero-title {
+	position: relative;
+    z-index: 1;
+    font-family: "Oxanium";
+    letter-spacing: -1px;
+	max-width: 1100px;
+	color: #F5E4FF;
+}
+.hero-title h1 {
+    font-weight: 600;
+	line-height: 1;
+    font-size: 7.5em;
+    margin: 0;
+    filter: drop-shadow(15px 15px 1px rgba(44, 44, 44, 0.3));
+}
+.hero-title p {
+    font-size: 2.5em;
+	margin-top: 2rem;
+    filter: drop-shadow(15px 10px 1px rgba(44, 44, 44, 0.3));
+}
+
+.learn-more {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ background: transparent;
+ padding: 0;
+ font-size: inherit;
+ font-family: inherit;
+ margin-top: 2rem;
+ width: 12rem;
+ height: auto;
+}
+
+.learn-more .circle {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: relative;
+ display: block;
+ margin: 0;
+ width: 3rem;
+ height: 3rem;
+ background: #7A09C1;
+ border-radius: 1.625rem;
+}
+
+.learn-more .circle .icon {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ background: #ffffff;
+}
+
+.learn-more .circle .icon.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ left: 0.625rem;
+ width: 1.125rem;
+ height: 0.125rem;
+ background: none;
+}
+
+.learn-more .circle .icon.arrow::before {
+ position: absolute;
+ content: "";
+ top: -0.29rem;
+ right: 0.0625rem;
+ width: 0.625rem;
+ height: 0.625rem;
+ border-top: 0.125rem solid #ffffff;
+ border-right: 0.125rem solid #ffffff;
+ transform: rotate(45deg);
+}
+
+.learn-more .button-text {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 0.75rem 0;
+ margin: 0 0 0 1.85rem;
+ color: #ffffff;
+ font-weight: 700;
+ line-height: 1.6;
+ text-align: center;
+ text-transform: uppercase;
+ font-family: "Oxanium";
+}
+
+.learn-more:hover .circle {
+ width: 100%;
+}
+
+.learn-more:hover .circle .icon.arrow {
+ background: #ffffff;
+ transform: translate(1rem, 0);
+}
+
+.learn-more:hover .button-text {
+ color: #ffffff;
+}
+
+
+
+/* SECTION THANKS */
+.thanks-section {
+	position: relative;
+	background: #040313;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-top: 70px;
+}
+.thanks-section .thanks-title {
+	position: relative;
+	z-index: 1;
+	font-family: "Oxanium";
+	max-width: 900px;
+	color: #F5E4FF;
+}
+.thanks-title h2 {
+	font-weight: 600;
+	line-height: 1;
+	font-size: 4.6875rem;
+	margin: 0;
+	filter: drop-shadow(15px 15px 1px rgba(44, 44, 44, 0.3));
+}
+.thanks-title span {
+	background: linear-gradient(90deg, #402DAE, #BD63D1);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+.thanks-title p {
+	font-size: 1.875rem;
+	margin-top: 2rem;
+	filter: drop-shadow(15px 10px 1px rgba(44, 44, 44, 0.3));
+}
+.btn {
+ width: 6.5em;
+ height: 2.3em;
+ margin: 0.5em;
+ background: #7A09C1;
+ color: rgb(255, 255, 255);
+ border: none;
+ border-radius: 0.625em;
+ font-family: "Oxanium";
+ font-size: 20px;
+ font-weight: bold;
+ cursor: pointer;
+ position: relative;
+ z-index: 1;
+ overflow: hidden;
+}
+
+.btn:hover {
+	color: #000000;
+}
+
+.btn:after {
+	content: "";
+	background: #ffffff;
+	position: absolute;
+	z-index: -1;
+	left: -20%;
+	right: -20%;
+	top: 0;
+	bottom: 0;
+	transform: skewX(-45deg) scale(0, 1);
+	transition: all 0.5s;
+}
+
+.btn:hover:after {
+	transform: skewX(-45deg) scale(1, 1);
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.btn-1 {
+	width: 6.5em;
+	height: 2.3em;
+	margin: 0.5em;
+	background: #FFFFFF;
+	color: #000000;
+	border: none;
+	border-radius: 0.625em;
+	font-size: 20px;
+	font-family: "Oxanium";
+	font-weight: bold;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+.btn-1:hover {
+	color: #ffffff;
+}
+
+.btn-1:after {
+	content: "";
+	background: #7A09C1;
+	position: absolute;
+	z-index: -1;
+	left: -20%;
+	right: -20%;
+	top: 0;
+	bottom: 0;
+	transform: skewX(-45deg) scale(0, 1);
+	transition: all 0.5s;
+}
+
+.btn-1:hover:after {
+	transform: skewX(-45deg) scale(1, 1);
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.elipse1 {
+	position: absolute;
+    width: 429px;
+    height: 629px;
+    top: -10%;
+    right: 0;
+}
+.elipse2 {
+	position: absolute;
+    width: 401px;
+    height: 401px;
+    bottom: 7%;
+    left: 0;
+}
