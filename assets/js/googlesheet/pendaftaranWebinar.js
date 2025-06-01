@@ -6,20 +6,13 @@ const sheetDataURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSYPCJbwWs
 const form = document.forms['form-pendaftaran-webinar'];
 const submitButton = form.querySelector('input[type="submit"]');
 
-// Elemen status
-const statusMessageContainer = document.createElement('div');
-statusMessageContainer.style.marginTop = '15px';
-statusMessageContainer.style.fontWeight = 'bold';
-submitButton.parentElement.insertAdjacentElement('afterend', statusMessageContainer);
-
 form.addEventListener('submit', e => {
     e.preventDefault();
 
     // Tampilkan status awal
     submitButton.disabled = true;
     submitButton.value = "Mengirim...";
-    statusMessageContainer.style.color = 'black';
-    statusMessageContainer.textContent = 'Sedang memproses data dan mengunggah file...';
+    alert('Sedang memproses data dan mengunggah file...');
 
     const formData = new FormData(form);
 
@@ -57,8 +50,7 @@ form.addEventListener('submit', e => {
 
     // Tampilkan pesan jika ada yang kosong
     if (isEmpty) {
-        statusMessageContainer.style.color = 'red';
-        statusMessageContainer.textContent = "Kamu wajib mengisi semua data yang ada.";
+       alert("Kamu wajib mengisi semua data yang ada.");
         submitButton.disabled = false;
         submitButton.value = "Kirim";
         return;
@@ -69,8 +61,7 @@ form.addEventListener('submit', e => {
     const noTelepon = formData.get("no_telepon")?.trim();
 
     if (!nama || !noTelepon) {
-        statusMessageContainer.style.color = 'red';
-        statusMessageContainer.textContent = "Nama lengkap dan nomor telepon wajib diisi.";
+       alert("Nama lengkap dan nomor telepon wajib diisi.");
         submitButton.disabled = false;
         submitButton.value = "Kirim";
         return;
@@ -96,8 +87,7 @@ form.addEventListener('submit', e => {
             });
 
             if (isDuplicate) {
-                statusMessageContainer.style.color = 'red';
-                statusMessageContainer.textContent = "Data dengan nama dan nomor telepon ini sudah pernah dikirim.";
+                alert("Data dengan nama dan nomor telepon ini sudah pernah dikirim.");
                 submitButton.disabled = false;
                 submitButton.value = "Kirim";
                 return;
@@ -107,8 +97,7 @@ form.addEventListener('submit', e => {
             uploadFormData(formData);
         })
         .catch(error => {
-            statusMessageContainer.style.color = 'red';
-            statusMessageContainer.textContent = "Gagal memeriksa duplikasi. Error: " + error.message;
+            alert("Gagal memeriksa duplikasi. Error: " + error.message);
             submitButton.disabled = false;
             submitButton.value = "Kirim";
         });
@@ -158,19 +147,16 @@ function uploadFormData(formData) {
         .then(response => response.json())
         .then(data => {
             if (data.result === 'success') {
-                statusMessageContainer.style.color = 'green';
-                statusMessageContainer.textContent = "Terima kasih! Formulir Anda telah berhasil dikirim.";
+                alert("Terima kasih! Formulir Anda telah berhasil dikirim.");
                 form.reset();
             } else if (data.result === 'duplicate') {
-                statusMessageContainer.style.color = 'red';
-                statusMessageContainer.textContent = "Data duplikat. Mohon gunakan nama & nomor telepon yang berbeda.";
+                alert("Data duplikat. Mohon gunakan nama & nomor telepon yang berbeda.");
             } else {
                 throw new Error(data.error || "Kesalahan tidak diketahui dari server.");
             }
         })
         .catch(error => {
-            statusMessageContainer.style.color = 'red';
-            statusMessageContainer.textContent = "Gagal mengirim formulir. Error: " + error.message;
+            alert("Gagal mengirim formulir. Error: " + error.message);
         })
         .finally(() => {
             submitButton.disabled = false;

@@ -76,7 +76,7 @@
                                                 <li><a href="https://himtika.cs.unsika.ac.id/semantik_9/">SEMANTIK</a></li>
                                                 <li><a href="https://himtika.cs.unsika.ac.id/studyclub-2024/">Study Club</a></li>
                                                 <li><a href="https://himtika.cs.unsika.ac.id/lkmmpd/">LKMM-PD</a></li>
-                                                <li><a href="https://himtika.cs.unsika.ac.id/pekan-it/">Pekan IT</a></li>
+                                                <li><a href="https://pekan-it-eight.vercel.app/">Pekan IT</a></li>
                                                 <li><a href="https://himtika.cs.unsika.ac.id/diesnatalis">Diesnatalis</a></li>
                                                 <li><a href="https://himtika.cs.unsika.ac.id/it-bootcamp/">IT Bootcamp</a></li>
                                             </ul>
@@ -161,7 +161,6 @@
                 </label>
             </div>
             <img class="elipse-1" src="assets/img/section-2/ellipse-1.png" alt="Elipse 1" />
-            <img class="elipse-2" src="assets/img/section-2/ellipse-2.png" alt="Elipse 2" />
         </section>
 
         <!-- Section 3: Data Diri -->
@@ -207,17 +206,33 @@
             <div class="form-2">
                 <span class="input-span-2">
                     <label for="bukti-grup" class="label-2">Upload Bukti Share Pamflet ke 2 Grup Whatsapp :</label>
-                    <label for="bukti-grup" class="custom-file-upload">
-                        <i class="fa-solid fa-cloud-arrow-up"></i> &nbsp; Pilih File
-                    </label>
-                    <input type="file" id="bukti-grup" name="bukti_grup" accept=".jpg,.jpeg,.png,.pdf" required />
+                    <input type="file" id="bukti-grup" name="bukti_grup" accept=".jpg,.jpeg,.png,.pdf" style="display: none;" required />
+                    <div class="upload-wrapper">
+                        <label for="bukti-grup" class="custom-file-upload" id="upload-label-grup">
+                            <i class="fa-solid fa-cloud-arrow-up"></i> &nbsp; Pilih File
+                        </label>
+                        <span id="upload-success-grup" class="upload-success" style="display: none;">
+                            ✅ Berhasil diunggah!
+                        </span>
+                        <button type="button" id="change-file-button-grup" class="change-file-btn" style="display: none;">
+                            Ganti File
+                        </button>
+                    </div>
                 </span>
                 <span class="input-span-2">
                     <label for="bukti-story" class="label-2">Upload Bukti Share Pamflet ke Instagram Story :</label>
-                    <label for="bukti-story" class="custom-file-upload">
-                        <i class="fa-solid fa-cloud-arrow-up"></i> &nbsp; Pilih File
-                    </label>
-                    <input type="file" id="bukti-story" name="bukti_story" accept=".jpg,.jpeg,.png,.pdf" required />
+                    <input type="file" id="bukti-story" name="bukti_story" accept=".jpg,.jpeg,.png,.pdf" style="display: none;" required />
+                    <div class="upload-wrapper">
+                        <label for="bukti-story" class="custom-file-upload" id="upload-label-story">
+                            <i class="fa-solid fa-cloud-arrow-up"></i> &nbsp; Pilih File
+                        </label>
+                        <span id="upload-success-story" class="upload-success" style="display: none;">
+                            ✅ Berhasil diunggah!
+                        </span>
+                        <button type="button" id="change-file-button-story" class="change-file-btn" style="display: none;">
+                            Ganti File
+                        </button>
+                    </div>
                 </span>
             </div>
             <img class="elipse-5" src="assets/img/section-4/ellipse-5.png" alt="Elipse 5" />
@@ -248,10 +263,20 @@
             <div class="form-2">
                 <span class="input-span-2">
                     <label for="payment_proof" class="label-2">Upload Bukti Pembayaran :</label>
-                    <label for="payment_proof" class="custom-file-upload">
-                        <i class="fa-solid fa-cloud-arrow-up"></i> &nbsp; Pilih File
-                    </label>
-                    <input type="file" id="payment_proof" name="payment_proof" accept=".jpg,.jpeg,.png,.pdf" required />
+                    <input type="file" id="payment_proof" style="display: none;" />
+                    <div id="upload-wrapper" class="upload-wrapper">
+                        <label for="payment_proof" class="custom-file-upload" id="upload-label">
+                            <i class="fa-solid fa-cloud-arrow-up"></i> &nbsp; Pilih File
+                        </label>
+
+                        <span id="upload-success" class="upload-success" style="display: none;">
+                            ✅ Berhasil diunggah!
+                        </span>
+
+                        <button type="button" id="change-file-button" class="change-file-btn" style="display: none;">
+                            Ganti File
+                        </button>
+                    </div>
                 </span>
                 <div class="button-group">
                     <input class="submit" type="submit" value="Kirim" />
@@ -296,7 +321,7 @@
                         <h4>Event</h4>
                         <ul>
                             <li><a href="https://himtika.cs.unsika.ac.id/semantik_9/">SEMANTIK</a></li>
-                            <li><a href="https://himtika.cs.unsika.ac.id/pekan-it/">PEKAN IT</a></li>
+                            <li><a href="https://pekan-it-eight.vercel.app/">PEKAN IT</a></li>
                             <li><a href="https://himtika.cs.unsika.ac.id/lkmmpd/">LKMM-PD</a></li>
                             <li><a href="https://himtika.cs.unsika.ac.id/diesnatalis">Dienatalis</a></li>
                             <li><a href="https://himtika.cs.unsika.ac.id/it-bootcamp/">IT Bootcamp</a></li>

@@ -141,3 +141,61 @@ document.addEventListener("DOMContentLoaded", () => {
 	  });
 	});
   });
+
+
+// UPLOAD FILE
+  document.addEventListener("DOMContentLoaded", function () {
+	const fileInput = document.getElementById("payment_proof");
+	const uploadSuccess = document.getElementById("upload-success");
+	const changeFileButton = document.getElementById("change-file-button");
+	const uploadLabel = document.getElementById("upload-label");
+
+	fileInput.addEventListener("change", function () {
+		if (fileInput.files.length > 0) {
+			uploadSuccess.style.display = "inline";
+			changeFileButton.style.display = "inline-block";
+			uploadLabel.style.display = "none";
+		}
+	});
+
+	changeFileButton.addEventListener("click", function () {
+		fileInput.click(); // Buka dialog pilih file lagi
+	});
+});
+document.addEventListener("DOMContentLoaded", function () {
+	// Grup Whatsapp
+	const fileGrup = document.getElementById("bukti-grup");
+	const successGrup = document.getElementById("upload-success-grup");
+	const changeBtnGrup = document.getElementById("change-file-button-grup");
+	const labelGrup = document.getElementById("upload-label-grup");
+
+	fileGrup.addEventListener("change", function () {
+		if (fileGrup.files.length > 0) {
+			successGrup.style.display = "inline";
+			changeBtnGrup.style.display = "inline-block";
+			labelGrup.style.display = "none";
+		}
+	});
+
+	changeBtnGrup.addEventListener("click", function () {
+		fileGrup.click();
+	});
+
+	// Instagram Story
+	const fileStory = document.getElementById("bukti-story");
+	const successStory = document.getElementById("upload-success-story");
+	const changeBtnStory = document.getElementById("change-file-button-story");
+	const labelStory = document.getElementById("upload-label-story");
+
+	fileStory.addEventListener("change", function () {
+		if (fileStory.files.length > 0) {
+			successStory.style.display = "inline";
+			changeBtnStory.style.display = "inline-block";
+			labelStory.style.display = "none";
+		}
+	});
+
+	changeBtnStory.addEventListener("click", function () {
+		fileStory.click();
+	});
+});

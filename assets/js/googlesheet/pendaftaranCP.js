@@ -96,8 +96,7 @@ form.addEventListener('submit', e => {
             });
 
             if (isDuplicate) {
-                statusMessageContainer.style.color = 'red';
-                statusMessageContainer.textContent = "Data dengan nama dan nomor telepon ini sudah pernah dikirim.";
+                alert("Data dengan nama dan nomor telepon ini sudah pernah dikirim.");
                 submitButton.disabled = false;
                 submitButton.value = "Kirim";
                 return;
@@ -107,8 +106,7 @@ form.addEventListener('submit', e => {
             uploadFormData(formData);
         })
         .catch(error => {
-            statusMessageContainer.style.color = 'red';
-            statusMessageContainer.textContent = "Gagal memeriksa duplikasi. Error: " + error.message;
+            alert("Gagal memeriksa duplikasi. Error: " + error.message);
             submitButton.disabled = false;
             submitButton.value = "Kirim";
         });
@@ -158,19 +156,16 @@ function uploadFormData(formData) {
         .then(response => response.json())
         .then(data => {
             if (data.result === 'success') {
-                statusMessageContainer.style.color = 'green';
-                statusMessageContainer.textContent = "Terima kasih! Formulir Anda telah berhasil dikirim.";
+               alert("Terima kasih! Formulir Anda telah berhasil dikirim.");
                 form.reset();
             } else if (data.result === 'duplicate') {
-                statusMessageContainer.style.color = 'red';
-                statusMessageContainer.textContent = "Data duplikat. Mohon gunakan nama & nomor telepon yang berbeda.";
+                alert("Data duplikat. Mohon gunakan nama & nomor telepon yang berbeda.");
             } else {
                 throw new Error(data.error || "Kesalahan tidak diketahui dari server.");
             }
         })
         .catch(error => {
-            statusMessageContainer.style.color = 'red';
-            statusMessageContainer.textContent = "Gagal mengirim formulir. Error: " + error.message;
+            alert("Gagal mengirim formulir. Error: " + error.message);
         })
         .finally(() => {
             submitButton.disabled = false;

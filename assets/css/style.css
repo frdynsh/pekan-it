@@ -730,7 +730,10 @@ ul,li{
 /* =============== Hero section ================ */
 .hero-section {
     position: relative;
-    background: #040313;
+    background: url("../img/hero-section/bg.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -741,26 +744,6 @@ ul,li{
     padding-top: 70px;
     color: white;
 }
-
-.bintang {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90%;
-    background: url("../img/hero-section/bintang.png") center no-repeat;
-    background-size: cover;
-}
-
-/* .bg-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    background: url("../img/hero-section/bg.png") center 20% no-repeat;
-    background-size: cover;
-} */
 
 .hero-section .hero-title {
     position: relative;
@@ -797,10 +780,10 @@ ul,li{
 .section-ke2 {
     position: relative;
     background:
-        /* url("../img/section-2/bg.png"), */
+        url("../img/section-2/bg.png"),
         #040313;
     background-size: cover;
-    background-position: center 275%;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -908,6 +891,7 @@ ul,li{
     justify-content: center;
     align-items: center;
     font-family: "Oxanium";
+	padding-top: 10rem;
 }
 .section-ke3 h1 {
 	font-size: 4.6875rem;
@@ -928,6 +912,7 @@ ul,li{
 	width: 100%;
 	max-width: 1000px;
 	z-index: 1;
+	margin-bottom: 10rem;
 }
 
 .form .input-span {
@@ -1032,16 +1017,22 @@ ul,li{
 .form-2 input[type="file"] {
 	display: none;
 }
-
 /* Tombol upload custom */
+.upload-wrapper {
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
 .custom-file-upload {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 0.75rem;
 	padding: 1.2rem 0.5rem;
-	width: 80%;
-	max-width: 300px;
+	min-width: 500px;
+	max-width: 500px;
 	border-radius: 2rem;
 	background-color: white;
 	outline: 2px solid #707070;
@@ -1061,6 +1052,28 @@ ul,li{
 	background-color: #707070;
 	color: #efefef;
 }
+.upload-success {
+	margin-left: 1rem;
+	font-size: 1.2rem;
+	color: green;
+	font-weight: 600;
+}
+
+.change-file-btn {
+	padding: 0.6rem 1.2rem;
+	font-size: 1rem;
+	border-radius: 1.5rem;
+	border: none;
+	background-color: #707070;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.change-file-btn:hover {
+	background-color: #505050;
+}
+
 .elipse-5 {
 	position: absolute;
     width: 429px;
