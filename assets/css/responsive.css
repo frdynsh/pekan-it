@@ -63,7 +63,6 @@
   .hero-title p {
     font-size: 2rem;
   }
-
   .section-ke2 h1,
   .section-ke3 h1,
   .section-ke4 h1,
@@ -93,6 +92,7 @@
   .custom-file-upload {
     font-size: 1.5rem;
     max-width: 250px;
+    min-width: 250px;
   }
 
   .custom-file-upload i {
@@ -131,6 +131,10 @@
 }
 
 @media (max-width: 768px) {
+    .hero-section {
+      height: 500px;
+      padding-top: 50px;
+    }
     .hero-title h1 {
       font-size: 4rem;
     }
@@ -139,7 +143,9 @@
       letter-spacing: -1px;
       font-size: 1.5rem;
     }
-    
+    .section-ke2 {
+      background-position-y: -100px;
+    }
     .section-ke2 h1,
     .section-ke3 h1,
     .section-ke4 h1,
@@ -203,9 +209,16 @@
       height: auto;
     }
 
+    .section-ke2 {
+      height: 100%;
+      padding: 4rem 0!important;
+    }
     .section-ke3 {
       height: 100%;
-      padding: 0 0 2rem !important;
+      padding: 2rem 0!important;
+    }
+    .form {
+      margin: 20px;
     }
     .elipse-3{
       display: none;
@@ -283,6 +296,20 @@
     }
     .section-3{
       margin-top: -40px; 
+    }
+    .elipse1 {
+      position: absolute;
+      width: 229px;
+      height: 229px;
+      top: -10%;
+      right: 0;
+    }
+    .elipse2 {
+      position: absolute;
+      width: 201px;
+      height: 201px;
+      bottom: 9%;
+      left: 0;
     }
   }
       

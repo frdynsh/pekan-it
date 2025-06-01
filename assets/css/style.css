@@ -6,6 +6,7 @@ body {
 	margin:0px;
 	padding:0px;
 	box-sizing: border-box;
+	background-color: #040314;
 }
 
 ::-webkit-scrollbar {
@@ -779,9 +780,7 @@ ul,li{
 /* =============== Section-2 ================ */
 .section-ke2 {
     position: relative;
-    background:
-        url("../img/section-2/bg.png"),
-        #040313;
+    background-image: url("../img/section-2/bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
